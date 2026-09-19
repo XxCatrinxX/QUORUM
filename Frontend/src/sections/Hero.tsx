@@ -3,24 +3,84 @@ import heroImg from '../assets/hero.png'
 export function Hero() {
   return (
     <section className="hero-section" id="top">
+
       <div className="hero-copy">
-        <p className="eyebrow">Estudio de producto digital · Desde 2018</p>
-        <h1>Ideas claras.<br /><em>Software</em> que mueve.</h1>
-        <p className="hero-intro">Diseñamos y construimos productos digitales que convierten problemas complejos en experiencias simples.</p>
-        <a className="button button-primary" href="#contact">Empezar un proyecto <span aria-hidden="true">↗</span></a>
-      </div>
-      <div className="hero-art" aria-label="Visual abstracto de producto digital">
-        <div className="art-grid" />
-        <div className="art-card art-card-main">
-          <span className="art-label">product / 01</span>
-          <img src={heroImg} alt="" />
-          <strong>Build what<br />matters.</strong>
+
+        <p className="eyebrow">
+          Soluciones tecnológicas para empresas
+        </p>
+
+        <h1>
+          Tu visión.
+          <br />
+          <em>Nuestra tecnología.</em>
+        </h1>
+
+        <p className="hero-intro">
+          Transformamos ideas y necesidades de negocio en
+          soluciones digitales que ayudan a las empresas a
+          crecer, automatizar y trabajar mejor.
+        </p>
+
+        <div className="hero-actions">
+
+          <a
+            className="button button-primary"
+            href="#contact"
+          >
+            Cuéntanos tu proyecto
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            className="button button-secondary"
+            href="#projects"
+          >
+            Ver proyectos
+          </a>
+
         </div>
-        <div className="art-card art-card-note">+ 42%<small>conversión</small></div>
+
+      </div>
+
+      <div
+        className="hero-art"
+        aria-label="Visual abstracto de tecnología"
+      >
+
+        <div className="art-grid" />
+
+        <div className="art-card art-card-main">
+
+          <span className="art-label">
+            technology / 01
+          </span>
+
+          <img src={heroImg} alt="" />
+
+          <strong>
+            Build what
+            <br />
+            matters.
+          </strong>
+
+        </div>
+
+        <div className="art-card art-card-note">
+          <span>Digital</span>
+          <small>solutions</small>
+        </div>
+
         <span className="art-orbit orbit-one" />
         <span className="art-orbit orbit-two" />
+
       </div>
-      <a className="scroll-cue" href="#services"><span aria-hidden="true">↓</span> Explorar</a>
+
+      <a className="scroll-cue" href="#services">
+        <span aria-hidden="true">↓</span>
+        Explorar
+      </a>
+
     </section>
   )
 }

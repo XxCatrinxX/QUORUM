@@ -84,13 +84,17 @@
   border: 1px solid #d1cbc1;
 
   transform: rotate(45deg);
+
+  background: #A2AD91;
 }
 
 .about-hero-mark span {
-  font-size: 130px;
-  font-weight: 500;
-
   transform: rotate(-45deg);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
 }
 
 

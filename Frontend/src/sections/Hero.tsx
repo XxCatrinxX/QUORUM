@@ -1,4 +1,4 @@
-import heroImg from '../assets/hero.png'
+import logo from '../assets/images/logo.png'
 
 export function Hero() {
   return (
@@ -56,7 +56,7 @@ export function Hero() {
             technology / 01
           </span>
 
-          <img src={heroImg} alt="" />
+          <img src={logo} alt="Logo" />
 
           <strong>
             Build what

@@ -1,4 +1,5 @@
 import './About.css';
+import logo from '../../assets/images/logo.png';
 
 const values = [
   {
@@ -68,7 +69,9 @@ function About() {
         </div>
 
         <div className="about-hero-mark">
-          <span>Q</span>
+          <span>
+            <img className="logo" src={logo} alt="Quorum Logo" />
+          </span>
         </div>
 
       </section>

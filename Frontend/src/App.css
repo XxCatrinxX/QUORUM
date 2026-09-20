@@ -62,17 +62,20 @@
 .brand-mark {
   display: grid;
   place-items: center;
+  justify-content: center;
 
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 
   color: var(--paper);
-  background: var(--ink);
+  background: #FFE3DC;
 
   border-radius: 50%;
 
   font-size: 15px;
   font-weight: 800;
+
+  margin-right: 5px;
 }
 
 .brand-dot {
@@ -110,6 +113,17 @@ nav a:hover,
   border-radius: 100px;
 }
 
+.logo {
+  width: 50px;
+  height: auto;
+  
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 130px;
+  }
+}
 
 /* =========================================================
    TYPOGRAPHY

@@ -45,18 +45,18 @@ export function Work() {
             key={project.title}
           >
             <div className="project-visual">
-              <span aria-hidden="true">
-                {project.title.charAt(0)}
-              </span>
+  <span className="project-letter" aria-hidden="true">
+    {project.title.charAt(0)}
+  </span>
 
-              <span className="project-index">
-                0{index + 1}
-              </span>
+  <span className="project-index">
+    0{index + 1}
+  </span>
 
-              <span className="project-tag">
-                {project.tag}
-              </span>
-            </div>
+  <span className="project-tag">
+    {project.tag}
+  </span>
+</div>
 
             <div className="project-info">
               <p className="project-category">

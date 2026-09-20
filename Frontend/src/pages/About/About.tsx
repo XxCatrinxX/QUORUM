@@ -69,10 +69,14 @@ function About() {
         </div>
 
         <div className="about-hero-mark">
-          <span>
-            <img className="logo" src={logo} alt="Quorum Logo" />
-          </span>
-        </div>
+  <span>
+    <img
+      className="logo-hero"
+      src={logo}
+      alt="Quorum Logo"
+      />
+  </span>
+      </div>
 
       </section>
 

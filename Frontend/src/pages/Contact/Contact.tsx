@@ -165,7 +165,7 @@ function Contact() {
 
       <section className="contact-form-section">
 
-        <div className="contact-form-intro">
+        <div className="contact-form-intro" id='form-contact'>
 
           <span className="eyebrow">
             02 / TU PROYECTO

@@ -1,4 +1,6 @@
-import logo from '../assets/images/logo.png'
+import { Link } from 'react-router-dom';
+
+import logo from '../assets/images/logo.png';
 
 export function Hero() {
   return (
@@ -24,20 +26,20 @@ export function Hero() {
 
         <div className="hero-actions">
 
-          <a
+          <Link
             className="button button-primary"
-            href="#contact"
+            to="/contacto#form-contact"
           >
             Cuéntanos tu proyecto
             <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             className="button button-secondary"
-            href="#projects"
+            to="/proyectos"
           >
             Ver proyectos
-          </a>
+          </Link>
 
         </div>
 
@@ -47,11 +49,9 @@ export function Hero() {
         className="hero-art"
         aria-label="Visual abstracto de tecnología"
       >
-
         <div className="art-grid" />
 
         <div className="art-card art-card-main">
-
           <span className="art-label">
             technology / 01
           </span>
@@ -63,7 +63,6 @@ export function Hero() {
             <br />
             matters.
           </strong>
-
         </div>
 
         <div className="art-card art-card-note">
@@ -76,11 +75,11 @@ export function Hero() {
 
       </div>
 
-      <a className="scroll-cue" href="#services">
+      <Link className="scroll-cue" to="/servicios">
         <span aria-hidden="true">↓</span>
         Explorar
-      </a>
+      </Link>
 
     </section>
-  )
+  );
 }

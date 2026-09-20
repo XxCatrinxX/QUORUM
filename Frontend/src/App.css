@@ -121,7 +121,7 @@ nav a:hover,
 
 @media (max-width: 768px) {
   .logo {
-    width: 130px;
+    width: 50px;
   }
 }
 
@@ -742,7 +742,7 @@ h2 em {
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
 
   .work-section {
     display: block;
@@ -750,7 +750,6 @@ h2 em {
 
   .work-heading {
     position: static;
-
     margin-bottom: 45px;
   }
 
@@ -760,18 +759,56 @@ h2 em {
 
   .project-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-    gap: 16px;
+  .project-card {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .project-visual {
     height: 260px;
+    margin-bottom: 22px;
   }
 
   .project-visual > span:first-child {
     font-size: 120px;
+    letter-spacing: -10px;
+  }
+
+  .project-index {
+    top: 16px;
+    left: 18px;
+  }
+
+  .project-tag {
+    top: 14px;
+    right: 14px;
+  }
+
+  .project-info {
+    position: relative;
+    z-index: 2;
+  }
+
+  .project-category {
+    margin-bottom: 8px;
+  }
+
+  .project-card h3 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .project-detail {
+    max-width: 100%;
+    line-height: 1.5;
   }
 }
+
+
 
 
 /* =========================================================
@@ -790,7 +827,7 @@ h2 em {
   overflow: hidden;
 
   color: var(--paper);
-  background: var(--coral);
+  background: var(--ink);
 }
 
 

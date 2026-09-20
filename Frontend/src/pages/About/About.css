@@ -74,30 +74,30 @@
 }
 
 .about-hero-mark {
-  width: 220px;
-  height: 220px;
-
+  width: 260px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #d1cbc1;
-
   transform: rotate(45deg);
-
   background: #A2AD91;
+  flex-shrink: 0;
 }
 
 .about-hero-mark span {
   transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  width: 100%;
-  height: auto;
+.logo-hero {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
 }
-
-
 /* =========================
    INTRO
 ========================= */

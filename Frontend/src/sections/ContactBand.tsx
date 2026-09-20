@@ -1,7 +1,6 @@
 import type { FC } from 'react'
 
-const CONTACT_EMAIL = 'hola@quorum.dev'
-const WHATSAPP_NUMBER = '521XXXXXXXXXX'
+const WHATSAPP_NUMBER = '523311948323'
 
 export const ContactBand: FC = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`
@@ -31,15 +30,6 @@ export const ContactBand: FC = () => {
 
         <div className="contact-band__actions">
           <a
-            className="button button-light"
-            href={`mailto:${CONTACT_EMAIL}`}
-            aria-label="Enviar un correo a QUORUM"
-          >
-            Cuéntanos tu proyecto
-            <span aria-hidden="true">↗</span>
-          </a>
-
-          <a
             className="button button-outline-light"
             href={whatsappUrl}
             target="_blank"
@@ -53,9 +43,6 @@ export const ContactBand: FC = () => {
       </div>
 
       <div className="contact-band__footer">
-        <a href={`mailto:${CONTACT_EMAIL}`}>
-          {CONTACT_EMAIL}
-        </a>
 
         <span aria-hidden="true">•</span>
 

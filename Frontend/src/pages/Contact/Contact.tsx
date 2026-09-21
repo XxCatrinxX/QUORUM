@@ -95,7 +95,7 @@ function Contact() {
         <div className="contact-info-grid">
 
           <a
-            href="mailto:hola@quorum.dev"
+            href="mailto:contacto@quórum.tech"
             className="contact-info-card"
           >
 
@@ -104,7 +104,7 @@ function Contact() {
             </span>
 
             <h2>
-              hola@quorum.dev
+              contacto@quórum.tech
             </h2>
 
             <span className="contact-info-arrow">
@@ -115,7 +115,7 @@ function Contact() {
 
 
           <a
-            href="https://wa.me/"
+            href="https://wa.me/523311948323"
             className="contact-info-card"
             target="_blank"
             rel="noreferrer"
@@ -488,8 +488,8 @@ function Contact() {
           <span>interesante.</span>
         </h2>
 
-        <a href="mailto:hola@quorum.dev">
-          hola@quorum.dev →
+        <a href="mailto:contacto@quórum.tech">
+          contacto@quórum.tech →
         </a>
 
       </section>

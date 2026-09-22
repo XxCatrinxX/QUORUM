@@ -1,3 +1,4 @@
+// Punto de entrada: monta React una sola vez y habilita el enrutamiento del sitio.
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'

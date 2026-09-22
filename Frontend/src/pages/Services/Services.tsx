@@ -1,3 +1,4 @@
+// Página de servicios: los arreglos superiores controlan las tarjetas y el proceso mostrado.
 import './Services.css';
 
 const services = [

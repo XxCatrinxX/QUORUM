@@ -1,3 +1,4 @@
+/* Estilos exclusivos de la página institucional de QUORUM. */
 .about-page {
   background: #f4f1eb;
   color: #171717;
@@ -74,26 +75,30 @@
 }
 
 .about-hero-mark {
-  width: 220px;
-  height: 220px;
-
+  width: 260px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #d1cbc1;
-
   transform: rotate(45deg);
+  background: #A2AD91;
+  flex-shrink: 0;
 }
 
 .about-hero-mark span {
-  font-size: 130px;
-  font-weight: 500;
-
   transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+.logo-hero {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
 /* =========================
    INTRO
 ========================= */
@@ -581,5 +586,520 @@
     height: 280px;
   }
 
+}
+
+/* Capa visual moderna de About. Estas reglas sobrescriben suavemente la base anterior. */
+.about-page {
+  --about-ink: #171717;
+  --about-muted: #777;
+  --about-paper: #f4f1eb;
+  --about-sand: #e8e3da;
+  --about-accent: #a2ad91;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 4%, rgba(162, 173, 145, 0.2), transparent 24rem),
+    var(--about-paper);
+}
+
+.about-page .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--about-muted);
+}
+
+.about-page .eyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--about-accent);
+  box-shadow: 0 0 0 5px rgba(162, 173, 145, 0.2);
+  content: '';
+}
+
+.about-hero {
+  min-height: 88vh;
+  padding: 130px 8%;
+  background: linear-gradient(115deg, rgba(244, 241, 235, 0.92), rgba(232, 227, 218, 0.55));
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  animation: about-reveal-up 0.9s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.about-hero h1,
+.about-intro h2,
+.story-header h2,
+.manifesto-content h2,
+.section-header h2,
+.principles-title h2,
+.team-header h2,
+.about-final-cta h2 {
+  font-weight: 600;
+}
+
+.about-hero h1 {
+  max-width: 880px;
+  font-size: clamp(58px, 8vw, 114px);
+}
+
+.about-hero h1 span,
+.about-intro h2 span,
+.story-header h2 span,
+.manifesto-content h2 span,
+.section-header h2 span,
+.team-header h2 span,
+.about-final-cta h2 span {
+  position: relative;
+  display: inline-block;
+  color: var(--about-muted);
+}
+
+.about-hero h1 span::after,
+.manifesto-content h2 span::after,
+.about-final-cta h2 span::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--about-accent);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: about-draw-line 0.8s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.about-hero p,
+.intro-content p,
+.story-text p,
+.section-header > p,
+.team-header p {
+  color: rgba(23, 23, 23, 0.64);
+}
+
+.about-hero p {
+  max-width: 540px;
+  animation: about-reveal-up 0.9s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.about-hero-mark {
+  position: relative;
+  width: clamp(190px, 24vw, 300px);
+  height: clamp(190px, 24vw, 300px);
+  border: 1px solid rgba(23, 23, 23, 0.18);
+  background: var(--about-accent);
+  box-shadow: 20px 20px 0 rgba(23, 23, 23, 0.12);
+  animation: about-mark-in 1s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both, about-mark-float 8s 1.3s ease-in-out infinite;
+}
+
+.about-hero-mark::before,
+.about-hero-mark::after {
+  position: absolute;
+  border: 1px solid rgba(23, 23, 23, 0.24);
+  content: '';
+}
+
+.about-hero-mark::before {
+  inset: 18px;
+}
+
+.about-hero-mark::after {
+  inset: 38px;
+  border-radius: 50%;
+}
+
+.logo-hero {
+  position: relative;
+  z-index: 1;
+  width: 68%;
+  height: 68%;
+  filter: contrast(1.05);
+}
+
+.about-intro,
+.story-section,
+.values-section,
+.principles-section,
+.team-section {
+  position: relative;
+}
+
+.about-intro,
+.story-section,
+.values-section,
+.principles-section,
+.team-section {
+  padding-top: 155px;
+  padding-bottom: 155px;
+}
+
+.intro-label,
+.manifesto-label,
+.contact-info-label,
+.principles-title {
+  color: rgba(23, 23, 23, 0.62);
+}
+
+.about-intro {
+  background: var(--about-paper);
+}
+
+.about-intro::before,
+.values-section::before,
+.team-section::before {
+  position: absolute;
+  top: 80px;
+  right: 8%;
+  width: 120px;
+  height: 1px;
+  background: var(--about-accent);
+  content: '';
+  transform-origin: right;
+  animation: about-line-pulse 4s ease-in-out infinite;
+}
+
+.story-section {
+  background: var(--about-sand);
+}
+
+.story-section,
+.values-section,
+.principles-section,
+.team-section,
+.about-final-cta {
+  animation: about-reveal-up 0.8s both;
+}
+
+.story-year {
+  color: var(--about-accent);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.manifesto-section {
+  position: relative;
+  isolation: isolate;
+  background: var(--about-ink);
+}
+
+.manifesto-section::before {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: min(42vw, 520px);
+  height: min(42vw, 520px);
+  border: 1px solid rgba(162, 173, 145, 0.3);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+  transform: translateY(-50%);
+  animation: about-orbit 14s ease-in-out infinite;
+}
+
+.manifesto-section::after {
+  position: absolute;
+  top: 50%;
+  right: 14%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--about-accent);
+  box-shadow: 0 0 0 10px rgba(162, 173, 145, 0.12);
+  content: '';
+  transform: translateY(-50%);
+}
+
+.manifesto-content,
+.manifesto-label {
+  position: relative;
+  z-index: 1;
+}
+
+.manifesto-content h2 {
+  max-width: 800px;
+}
+
+.manifesto-content h2 span {
+  color: var(--about-accent);
+}
+
+.values-grid {
+  border-color: rgba(23, 23, 23, 0.16);
+}
+
+.value-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+  background: rgba(255, 255, 255, 0.16);
+  transition: color 0.4s ease, background 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.value-card::after {
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(162, 173, 145, 0.7);
+  border-radius: 50%;
+  content: '';
+  transition: transform 0.6s ease;
+}
+
+.value-card:hover {
+  z-index: 1;
+  background: var(--about-ink);
+  color: var(--about-paper);
+  box-shadow: 0 22px 45px rgba(23, 23, 23, 0.15);
+  transform: translateY(-8px);
+}
+
+.value-card:hover::after {
+  transform: scale(1.5);
+}
+
+.value-card:hover p {
+  color: rgba(244, 241, 235, 0.68);
+}
+
+.value-number {
+  color: var(--about-accent);
+}
+
+.value-card h3 {
+  position: relative;
+  z-index: 1;
+}
+
+.principles-section {
+  background: var(--about-sand);
+}
+
+.principle-item {
+  position: relative;
+  transition: padding 0.35s ease, color 0.35s ease, background 0.35s ease;
+}
+
+.principle-item::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--about-accent);
+  content: '';
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.principle-item:hover {
+  padding-right: 14px;
+  padding-left: 14px;
+  background: rgba(162, 173, 145, 0.12);
+}
+
+.principle-item:hover::before {
+  width: 100%;
+}
+
+.principle-item h3 {
+  transition: transform 0.35s ease;
+}
+
+.principle-item:hover h3 {
+  transform: translateX(8px);
+}
+
+.principle-arrow {
+  color: var(--about-accent);
+  transition: transform 0.35s ease;
+}
+
+.principle-item:hover .principle-arrow {
+  transform: translate(4px, -4px);
+}
+
+.team-placeholder {
+  position: relative;
+  isolation: isolate;
+  background: var(--about-ink);
+  box-shadow: 18px 18px 0 rgba(162, 173, 145, 0.5);
+}
+
+.team-placeholder::before,
+.team-placeholder::after {
+  position: absolute;
+  border: 1px solid rgba(162, 173, 145, 0.45);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.team-placeholder::before {
+  top: -38%;
+  right: -8%;
+  width: 70%;
+  height: 140%;
+  animation: about-orbit 12s ease-in-out infinite reverse;
+}
+
+.team-placeholder::after {
+  bottom: -35%;
+  left: -12%;
+  width: 48%;
+  height: 90%;
+  border-color: rgba(244, 241, 235, 0.18);
+}
+
+.team-placeholder-content {
+  position: relative;
+  z-index: 1;
+  border-color: rgba(162, 173, 145, 0.48);
+  animation: about-reveal-up 0.9s 0.2s both;
+}
+
+.team-placeholder-content strong {
+  color: var(--about-paper);
+}
+
+.about-final-cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--about-paper);
+}
+
+.about-final-cta::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(58vw, 700px);
+  height: min(58vw, 700px);
+  border: 1px solid rgba(162, 173, 145, 0.35);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.about-final-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-final-cta a {
+  background: var(--about-ink);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-final-cta a:hover {
+  color: var(--about-ink);
+  background: var(--about-accent);
+  box-shadow: 7px 7px 0 rgba(23, 23, 23, 0.18);
+  transform: translateY(-5px);
+}
+
+@keyframes about-reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes about-mark-in {
+  from { opacity: 0; transform: rotate(28deg) scale(0.75); }
+  to { opacity: 1; transform: rotate(45deg) scale(1); }
+}
+
+@keyframes about-mark-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+
+@keyframes about-draw-line {
+  to { transform: scaleX(1); }
+}
+
+@keyframes about-line-pulse {
+  0%, 100% { transform: scaleX(0.65); opacity: 0.55; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes about-orbit {
+  0%, 100% { rotate: -5deg; scale: 1; }
+  50% { rotate: 5deg; scale: 1.04; }
+}
+
+@media (max-width: 800px) {
+  .about-hero {
+    padding: 105px 6% 95px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(50px, 13vw, 78px);
+  }
+
+  .about-hero p {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .about-intro,
+  .story-section,
+  .values-section,
+  .principles-section,
+  .team-section {
+    padding-top: 105px;
+    padding-bottom: 105px;
+  }
+
+  .manifesto-section {
+    min-height: 620px;
+  }
+
+  .manifesto-section::before {
+    top: auto;
+    right: -30%;
+    bottom: 5%;
+    width: 90vw;
+    height: 90vw;
+    transform: none;
+  }
+
+  .manifesto-section::after {
+    top: auto;
+    right: 13%;
+    bottom: 48%;
+    transform: none;
+  }
+
+  .value-card:hover,
+  .principle-item:hover {
+    transform: none;
+  }
+
+  .team-placeholder {
+    box-shadow: 10px 10px 0 rgba(162, 173, 145, 0.5);
+  }
+
+  .about-final-cta {
+    padding: 125px 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 

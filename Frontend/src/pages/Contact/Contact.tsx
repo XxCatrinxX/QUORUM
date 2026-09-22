@@ -1,3 +1,4 @@
+// Página de contacto: gestiona el estado del formulario y sus canales directos.
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import './Contact.css';
 

@@ -1,3 +1,4 @@
+// Contenido provisional para páginas estáticas que todavía no tienen una vista propia.
 export function About() {
   return (
     <section>

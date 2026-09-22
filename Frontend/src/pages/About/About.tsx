@@ -1,3 +1,4 @@
+// Página institucional: valores, principios e historia de QUORUM.
 import './About.css';
 import logo from '../../assets/images/logo.png';
 

@@ -1,3 +1,4 @@
+// Pie compartido del sitio; el contenido de marca y año se actualiza aquí.
 import logo from '../../assets/images/logo.png';
 
 export function Footer() {

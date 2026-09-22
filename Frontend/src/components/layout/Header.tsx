@@ -1,3 +1,4 @@
+// Navegación persistente. Mantener sus destinos sincronizados con AppRoutes.
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 

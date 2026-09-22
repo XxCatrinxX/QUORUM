@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+// Catálogo de proyectos: los datos de cada tarjeta se mantienen en los arreglos de esta vista.
 import './Projects.css';
 
 const projects = [

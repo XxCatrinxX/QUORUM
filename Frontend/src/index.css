@@ -1,3 +1,4 @@
+/* Reset mínimo y tipografía base. Los estilos de páginas viven junto a App.css. */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: #f4f1eb; font-family: 'Avenir Next', 'Trebuchet MS', sans-serif; color: #172b2d; -webkit-font-smoothing: antialiased; }

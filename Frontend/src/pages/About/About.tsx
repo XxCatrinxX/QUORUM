@@ -1,4 +1,6 @@
+// Página institucional: valores, principios e historia de QUORUM.
 import './About.css';
+import logo from '../../assets/images/logo.png';
 
 const values = [
   {
@@ -68,8 +70,14 @@ function About() {
         </div>
 
         <div className="about-hero-mark">
-          <span>Q</span>
-        </div>
+  <span>
+    <img
+      className="logo-hero"
+      src={logo}
+      alt="Quorum Logo"
+      />
+  </span>
+      </div>
 
       </section>
 

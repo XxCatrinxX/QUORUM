@@ -1,0 +1,75 @@
+.admin-logout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.admin-logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 44px;
+  padding: 10px 14px;
+
+  color: #f6efe4;
+  background: transparent;
+
+  border: 1px solid rgba(246, 239, 228, 0.18);
+  border-radius: 12px;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-logout-button:hover:not(:disabled) {
+  background: rgba(246, 239, 228, 0.08);
+  border-color: rgba(246, 239, 228, 0.32);
+}
+
+.admin-logout-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.admin-logout-button:focus-visible {
+  outline: 2px solid #e97861;
+  outline-offset: 3px;
+}
+
+.admin-logout-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.admin-logout-icon {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.admin-logout-error {
+  max-width: 230px;
+  margin: 0;
+
+  color: #ffb4a6;
+
+  font-size: 12px;
+  line-height: 1.4;
+}

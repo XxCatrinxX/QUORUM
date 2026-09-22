@@ -16,7 +16,6 @@
   color: var(--ink);
 }
 
-
 /* =========================================================
    LAYOUT
    ========================================================= */
@@ -28,7 +27,6 @@
   width: min(1180px, calc(100% - 80px));
   margin: 0 auto;
 }
-
 
 /* =========================================================
    HEADER
@@ -110,7 +108,6 @@ nav a:hover,
   border-radius: 100px;
 }
 
-
 /* =========================================================
    TYPOGRAPHY
    ========================================================= */
@@ -138,7 +135,7 @@ h1,
 h2 {
   margin-bottom: 25px;
 
-  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
   font-weight: 800;
 
   letter-spacing: -3px;
@@ -156,7 +153,6 @@ h2 em {
   color: var(--coral);
   font-style: normal;
 }
-
 
 /* =========================================================
    BUTTONS
@@ -220,7 +216,6 @@ h2 em {
   opacity: 1;
 }
 
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -266,7 +261,6 @@ h2 em {
   font-size: 17px;
   line-height: 1.55;
 }
-
 
 /* =========================================================
    HERO — ART
@@ -427,7 +421,6 @@ h2 em {
   font-size: 20px;
 }
 
-
 /* =========================================================
    SECTIONS
    ========================================================= */
@@ -441,7 +434,6 @@ h2 em {
 .section-heading h2 {
   font-size: clamp(42px, 5vw, 68px);
 }
-
 
 /* =========================================================
    SERVICES
@@ -499,7 +491,6 @@ h2 em {
   line-height: 1.5;
 }
 
-
 /* =========================================================
    WORK / PROJECTS
    ========================================================= */
@@ -534,7 +525,6 @@ h2 em {
   line-height: 1.6;
 }
 
-
 /* Project grid */
 
 .project-grid {
@@ -544,7 +534,6 @@ h2 em {
 
   gap: 20px;
 }
-
 
 /* Project card */
 
@@ -566,7 +555,6 @@ h2 em {
   box-shadow: 0 18px 40px rgba(23, 43, 45, 0.12);
 }
 
-
 /* Existing project colors */
 
 .project-sand {
@@ -578,7 +566,6 @@ h2 em {
   background: var(--coral);
   color: var(--paper);
 }
-
 
 /* Project visual */
 
@@ -598,7 +585,7 @@ h2 em {
 }
 
 .project-visual::before {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -622,14 +609,13 @@ h2 em {
   opacity: 0.3;
 }
 
-
 /* Initial letter */
 
 .project-visual > span:first-child {
   position: relative;
   z-index: 1;
 
-  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
 
   font-size: clamp(110px, 12vw, 165px);
 
@@ -639,7 +625,6 @@ h2 em {
 
   letter-spacing: -15px;
 }
-
 
 /* Project number */
 
@@ -654,7 +639,6 @@ h2 em {
 
   letter-spacing: 1px;
 }
-
 
 /* Project status */
 
@@ -679,7 +663,6 @@ h2 em {
   opacity: 0.7;
 }
 
-
 /* Project information */
 
 .project-info {
@@ -702,7 +685,7 @@ h2 em {
 .project-card h3 {
   margin-bottom: 5px;
 
-  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
 
   font-size: 30px;
 
@@ -723,13 +706,11 @@ h2 em {
   opacity: 0.7;
 }
 
-
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 
 @media (max-width: 800px) {
-
   .work-section {
     display: block;
   }
@@ -759,7 +740,6 @@ h2 em {
   }
 }
 
-
 /* =========================================================
    CONTACT BAND
    ========================================================= */
@@ -779,11 +759,10 @@ h2 em {
   background: var(--coral);
 }
 
-
 /* Decorative shape */
 
 .contact-band::before {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -800,7 +779,7 @@ h2 em {
 }
 
 .contact-band::after {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -815,7 +794,6 @@ h2 em {
 
   pointer-events: none;
 }
-
 
 /* Content */
 
@@ -858,7 +836,7 @@ h2 em {
 
   color: var(--paper);
 
-  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
 
   font-size: clamp(42px, 5vw, 68px);
 
@@ -878,7 +856,6 @@ h2 em {
   font-size: 16px;
   line-height: 1.6;
 }
-
 
 /* Actions */
 
@@ -914,7 +891,6 @@ h2 em {
   transform: translateY(-3px);
 }
 
-
 /*
    IMPORTANTE:
    Usamos el mismo .button-light que ya existe
@@ -930,7 +906,6 @@ h2 em {
   color: var(--paper);
   background: var(--ink);
 }
-
 
 /* Secondary button */
 
@@ -949,7 +924,6 @@ h2 em {
 
   border-color: var(--mint);
 }
-
 
 /* Contact footer */
 
@@ -985,7 +959,6 @@ h2 em {
   color: var(--ink);
 }
 
-
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -1016,13 +989,11 @@ h2 em {
   text-align: right !important;
 }
 
-
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 
 @media (max-width: 800px) {
-
   .site-header,
   .hero-section,
   .section,
@@ -1043,7 +1014,6 @@ h2 em {
   .header-link {
     padding: 9px 13px;
   }
-
 
   /* Hero */
 
@@ -1093,7 +1063,6 @@ h2 em {
     bottom: 4px;
   }
 
-
   /* Sections */
 
   .section {
@@ -1108,7 +1077,6 @@ h2 em {
     margin-bottom: 45px;
   }
 
-
   /* Projects */
 
   .project-grid {
@@ -1122,7 +1090,6 @@ h2 em {
   .project-visual span {
     font-size: 95px;
   }
-
 
   /* Contact */
 
@@ -1162,7 +1129,6 @@ h2 em {
     margin-top: 55px;
   }
 
-
   /* Footer */
 
   .site-footer {
@@ -1177,4 +1143,795 @@ h2 em {
 
     text-align: left !important;
   }
+}
+
+/* =========================================================
+   ADMIN
+   ========================================================= */
+
+.admin-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: #ece9e2;
+  color: var(--ink);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  padding: 32px 24px;
+
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(244, 241, 235, 0.15);
+}
+
+.admin-brand .brand-mark {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.admin-brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-brand strong {
+  font-size: 18px;
+}
+
+.admin-brand small {
+  margin-top: 3px;
+
+  color: rgba(244, 241, 235, 0.5);
+
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin: 40px 0 0;
+}
+
+.admin-nav-link {
+  padding: 13px 15px;
+
+  color: rgba(244, 241, 235, 0.65);
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-nav-link:hover {
+  color: var(--paper);
+  background: rgba(244, 241, 235, 0.07);
+}
+
+.admin-nav-link.active {
+  color: var(--ink);
+  background: var(--mint);
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(244, 241, 235, 0.15);
+}
+
+.admin-sidebar-footer a {
+  color: rgba(244, 241, 235, 0.6);
+
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.admin-sidebar-footer a:hover {
+  color: var(--paper);
+}
+
+.admin-content {
+  min-width: 0;
+}
+
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 86px;
+
+  padding: 0 40px;
+
+  background: var(--paper);
+
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-topbar-label {
+  color: rgba(23, 43, 45, 0.5);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.admin-user-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  color: var(--paper);
+  background: var(--ink);
+
+  border-radius: 50%;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-user > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-user strong {
+  font-size: 12px;
+}
+
+.admin-user span {
+  margin-top: 2px;
+
+  color: rgba(23, 43, 45, 0.45);
+
+  font-size: 10px;
+}
+
+.admin-main {
+  padding: 50px 40px;
+}
+
+.admin-page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 40px;
+}
+
+.admin-page-heading h1 {
+  margin: 4px 0 12px;
+
+  font-size: clamp(42px, 5vw, 64px);
+}
+
+.admin-page-heading p {
+  margin: 0;
+
+  color: rgba(23, 43, 45, 0.6);
+
+  font-size: 15px;
+}
+
+.admin-eyebrow {
+  color: var(--coral);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.admin-primary-button {
+  padding: 13px 18px;
+
+  color: var(--paper);
+  background: var(--ink);
+
+  border: none;
+  border-radius: 100px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-primary-button:hover {
+  background: var(--coral);
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.admin-stat-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 180px;
+
+  padding: 24px;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+}
+
+.admin-stat-card > span {
+  color: rgba(23, 43, 45, 0.55);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-stat-card strong {
+  margin: 20px 0;
+
+  font-size: 48px;
+  line-height: 1;
+}
+
+.admin-stat-card small {
+  margin-top: auto;
+
+  color: rgba(23, 43, 45, 0.5);
+}
+
+.admin-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-height: 310px;
+
+  padding: 45px;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+}
+
+.admin-empty-state > span {
+  color: var(--coral);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-empty-state h2 {
+  margin: auto 0 15px;
+
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.admin-empty-state p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: rgba(23, 43, 45, 0.55);
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ADMIN — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-shell {
+    display: block;
+  }
+
+  .admin-sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .admin-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .admin-sidebar-footer {
+    display: none;
+  }
+
+  .admin-topbar {
+    padding: 0 20px;
+  }
+
+  .admin-main {
+    padding: 35px 20px;
+  }
+
+  .admin-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   ADMIN LOGIN
+   ========================================================= */
+
+.admin-login {
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+
+  padding: 30px;
+
+  background: var(--ink);
+}
+
+.admin-login-card {
+  width: min(100%, 470px);
+
+  padding: 42px;
+
+  background: var(--paper);
+
+  border-radius: 4px;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.admin-login-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 55px;
+}
+
+.admin-login-brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  color: var(--paper);
+  background: var(--ink);
+
+  border-radius: 50%;
+
+  font-weight: 800;
+}
+
+.admin-login-brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-login-brand strong {
+  font-size: 16px;
+
+  letter-spacing: -0.4px;
+}
+
+.admin-login-brand div span {
+  margin-top: 2px;
+
+  color: rgba(23, 43, 45, 0.5);
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.admin-login-heading {
+  margin-bottom: 30px;
+}
+
+.admin-login-heading h1 {
+  margin: 7px 0 12px;
+
+  font-size: 48px;
+
+  letter-spacing: -2px;
+}
+
+.admin-login-heading p {
+  margin: 0;
+
+  color: rgba(23, 43, 45, 0.6);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.admin-form-group label {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.admin-form-group input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  color: var(--ink);
+  background: transparent;
+
+  border: 1px solid rgba(23, 43, 45, 0.2);
+
+  border-radius: 3px;
+
+  outline: none;
+
+  font: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-form-group input:focus {
+  border-color: var(--ink);
+
+  box-shadow: 0 0 0 3px rgba(23, 43, 45, 0.08);
+}
+
+/* =========================================================
+   ERROR EN INPUT
+   ========================================================= */
+
+.admin-form-group input.admin-input-error {
+  border-color: #c74f42;
+}
+
+.admin-form-group input.admin-input-error:focus {
+  border-color: #c74f42;
+
+  box-shadow: 0 0 0 3px rgba(199, 79, 66, 0.12);
+}
+
+/* =========================================================
+   MENSAJE DE ERROR DE CAMPO
+   ========================================================= */
+
+.admin-field-error {
+  color: #b53e33;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ALERTA GENERAL
+   ========================================================= */
+
+.admin-login-alert {
+  margin-bottom: 24px;
+
+  padding: 13px 15px;
+
+  color: #8f3028;
+  background: rgba(199, 79, 66, 0.1);
+
+  border: 1px solid rgba(199, 79, 66, 0.25);
+  border-radius: 3px;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
+
+.admin-login-button {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 15px 20px;
+
+  color: var(--paper);
+  background: var(--ink);
+
+  border: 0;
+  border-radius: 100px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.admin-login-button:hover:not(:disabled) {
+  background: var(--coral);
+
+  transform: translateY(-1px);
+}
+
+.admin-login-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   REGRESAR
+   ========================================================= */
+
+.admin-login-back {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  color: rgba(23, 43, 45, 0.55);
+
+  font-size: 12px;
+
+  text-decoration: none;
+}
+
+.admin-login-back:hover {
+  color: var(--ink);
+}
+
+/* =========================================================
+   LOGIN - PASSWORD
+   ========================================================= */
+
+.admin-password-wrapper {
+  position: relative;
+}
+
+.admin-password-wrapper input {
+  padding-right: 52px;
+}
+
+.admin-password-toggle {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  color: rgba(23, 43, 45, 0.55);
+  background: transparent;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.admin-password-toggle:hover {
+  color: var(--ink);
+
+  background: rgba(23, 43, 45, 0.07);
+}
+
+.admin-password-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.admin-password-toggle:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.admin-password-toggle svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================================================
+   LOGIN - REMEMBER ME
+   ========================================================= */
+
+.admin-remember {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 10px;
+
+  color: rgba(23, 43, 45, 0.65);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.admin-remember input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.admin-remember-control {
+  position: relative;
+
+  width: 38px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  background: rgba(23, 43, 45, 0.16);
+
+  border-radius: 100px;
+
+  transition: background-color 0.2s ease;
+}
+
+.admin-remember-control::after {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 16px;
+  height: 16px;
+
+  background: var(--paper);
+
+  border-radius: 50%;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.2s ease;
+}
+
+.admin-remember input:checked + .admin-remember-control {
+  background: var(--ink);
+}
+
+.admin-remember input:checked + .admin-remember-control::after {
+  transform: translateX(16px);
+}
+
+.admin-remember input:focus-visible + .admin-remember-control {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.admin-remember:hover .admin-remember-text {
+  color: var(--ink);
+}
+
+.admin-remember-text {
+  transition: color 0.2s ease;
 }

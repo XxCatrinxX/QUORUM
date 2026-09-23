@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,10 +29,6 @@ Route::middleware([
 
             'role' => $user->role,
 
-            /*
-             * Preparado para permitir una foto
-             * de perfil en el futuro.
-             */
             'avatar_url' =>
             $user->avatar_url ?? null,
         ]);
@@ -55,11 +52,49 @@ Route::middleware([
         Route::get(
             '/dashboard',
             function () {
-
                 return response()->json([
                     'message' =>
                     'Dashboard administrativo',
                 ]);
             }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Proyectos
+        |--------------------------------------------------------------------------
+        */
+
+        Route::get(
+            '/projects',
+            [
+                ProjectController::class,
+                'index',
+            ]
+        );
+
+        Route::post(
+            '/projects',
+            [
+                ProjectController::class,
+                'store',
+            ]
+        );
+
+        Route::put(
+            '/projects/{project}',
+            [
+                ProjectController::class,
+                'update',
+            ]
+        );
+
+        Route::delete(
+            '/projects/{project}',
+            [
+                ProjectController::class,
+                'destroy',
+            ]
         );
     });

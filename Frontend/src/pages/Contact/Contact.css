@@ -4,7 +4,6 @@
   color: #171717;
 }
 
-
 /* =========================
    GENERAL
 ========================= */
@@ -29,7 +28,6 @@
 .contact-page p {
   margin: 0;
 }
-
 
 /* =========================
    HERO
@@ -100,7 +98,6 @@
 
   letter-spacing: -0.05em;
 }
-
 
 /* =========================
    CONTACT INFO
@@ -188,7 +185,6 @@
   font-size: 22px;
 }
 
-
 /* =========================
    FORM
 ========================= */
@@ -230,7 +226,6 @@
 
   color: #666;
 }
-
 
 /* FORM GRID */
 
@@ -307,7 +302,6 @@
   min-height: 150px;
 }
 
-
 /* SUBMIT */
 
 .form-submit {
@@ -364,7 +358,6 @@
   color: #888;
 }
 
-
 /* SUCCESS */
 
 .form-success {
@@ -388,7 +381,6 @@
 
   color: #666;
 }
-
 
 /* =========================
    PROCESS
@@ -458,7 +450,6 @@
   color: #999;
 }
 
-
 /* STEPS */
 
 .contact-steps {
@@ -496,7 +487,6 @@
 
   font-weight: 500;
 }
-
 
 /* =========================
    FINAL
@@ -544,13 +534,11 @@
   transform: translateY(-3px);
 }
 
-
 /* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
-
   .contact-hero {
     min-height: auto;
 
@@ -597,7 +585,6 @@
   .contact-final {
     padding: 120px 6%;
   }
-
 }
 
 /* Capa visual moderna: conserva la estructura base y mejora jerarquia, foco e interaccion. */
@@ -609,13 +596,21 @@
   --contact-shadow: 0 24px 60px rgba(23, 23, 23, 0.14);
   overflow: hidden;
   background:
-    radial-gradient(circle at 88% 4%, rgba(162, 173, 145, 0.2), transparent 24rem),
+    radial-gradient(
+      circle at 88% 4%,
+      rgba(162, 173, 145, 0.2),
+      transparent 24rem
+    ),
     var(--contact-paper);
 }
 
 .contact-hero {
   position: relative;
-  background: linear-gradient(120deg, rgba(244, 241, 235, 0.98), rgba(232, 227, 218, 0.5));
+  background: linear-gradient(
+    120deg,
+    rgba(244, 241, 235, 0.98),
+    rgba(232, 227, 218, 0.5)
+  );
 }
 
 .contact-hero::before,
@@ -624,7 +619,7 @@
   position: absolute;
   border: 1px solid rgba(162, 173, 145, 0.35);
   border-radius: 50%;
-  content: '';
+  content: "";
   pointer-events: none;
   animation: contact-orbit 14s ease-in-out infinite;
 }
@@ -662,7 +657,7 @@
   height: 3px;
   border-radius: 99px;
   background: var(--contact-accent);
-  content: '';
+  content: "";
   transform: scaleX(0);
   transform-origin: left;
   animation: contact-draw-line 0.8s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -671,7 +666,11 @@
 .contact-info-card {
   position: relative;
   overflow: hidden;
-  transition: background 0.35s ease, color 0.35s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
 }
 
 .contact-info-card::after {
@@ -682,7 +681,7 @@
   height: 130px;
   border: 1px solid rgba(162, 173, 145, 0.55);
   border-radius: 50%;
-  content: '';
+  content: "";
   transition: transform 0.6s ease;
 }
 
@@ -725,7 +724,7 @@
   height: 360px;
   border: 1px solid rgba(162, 173, 145, 0.35);
   border-radius: 50%;
-  content: '';
+  content: "";
   pointer-events: none;
   animation: contact-orbit 12s ease-in-out infinite reverse;
 }
@@ -739,7 +738,10 @@
 .form-field input,
 .form-field select,
 .form-field textarea {
-  transition: border-color 0.3s ease, padding-left 0.3s ease, background 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease,
+    background 0.3s ease;
 }
 
 .form-field input:focus,
@@ -752,7 +754,11 @@
 
 .form-submit button {
   box-shadow: 0 7px 0 rgba(23, 23, 23, 0.14);
-  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .form-submit button:hover {
@@ -798,7 +804,9 @@
 }
 
 .contact-steps div {
-  transition: border-color 0.35s ease, transform 0.35s ease;
+  transition:
+    border-color 0.35s ease,
+    transform 0.35s ease;
 }
 
 .contact-steps div:hover {
@@ -836,7 +844,11 @@
 .contact-final a {
   position: relative;
   z-index: 1;
-  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .contact-final a:hover {
@@ -847,17 +859,32 @@
 }
 
 @keyframes contact-reveal {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes contact-draw-line {
-  to { transform: scaleX(1); }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes contact-orbit {
-  0%, 100% { rotate: -5deg; scale: 1; }
-  50% { rotate: 5deg; scale: 1.04; }
+  0%,
+  100% {
+    rotate: -5deg;
+    scale: 1;
+  }
+  50% {
+    rotate: 5deg;
+    scale: 1.04;
+  }
 }
 
 @media (max-width: 900px) {
@@ -901,7 +928,7 @@
   box-shadow:
     0 0 0 8px rgba(162, 173, 145, 0.12),
     0 0 0 20px rgba(162, 173, 145, 0.07);
-  content: '';
+  content: "";
   pointer-events: none;
   animation: contact-signal 3.8s ease-in-out infinite;
 }
@@ -911,7 +938,10 @@
   color: transparent;
   -webkit-text-stroke: 1px rgba(23, 23, 23, 0.32);
   text-shadow: 8px 8px 0 rgba(162, 173, 145, 0.35);
-  transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.4s ease,
+    transform 0.4s ease;
 }
 
 .contact-hero-number:hover strong {
@@ -930,8 +960,13 @@
   left: -110%;
   width: 70%;
   height: 100%;
-  background: linear-gradient(110deg, transparent, rgba(244, 241, 235, 0.12), transparent);
-  content: '';
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(244, 241, 235, 0.12),
+    transparent
+  );
+  content: "";
   pointer-events: none;
   transform: skewX(-18deg);
   transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -951,8 +986,13 @@
   bottom: 0;
   left: 35%;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(162, 173, 145, 0.55), transparent);
-  content: '';
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(162, 173, 145, 0.55),
+    transparent
+  );
+  content: "";
   opacity: 0.5;
   transform-origin: top;
   animation: contact-scan 6s ease-in-out infinite;
@@ -970,7 +1010,7 @@
   height: 1px;
   background: var(--contact-accent);
   box-shadow: 0 0 20px var(--form-glow);
-  content: '';
+  content: "";
   animation: contact-focus-line 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -985,7 +1025,7 @@
   left: 0;
   height: 1px;
   background: var(--contact-accent);
-  content: '';
+  content: "";
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1012,7 +1052,7 @@
   left: 0;
   height: 2px;
   background: var(--contact-accent);
-  content: '';
+  content: "";
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1030,25 +1070,48 @@
   height: min(38vw, 460px);
   border: 1px dashed rgba(162, 173, 145, 0.45);
   border-radius: 50%;
-  content: '';
+  content: "";
   pointer-events: none;
   transform: translate(-50%, -50%);
   animation: contact-orbit 18s linear infinite reverse;
 }
 
 @keyframes contact-signal {
-  0%, 100% { opacity: 0.35; scale: 0.8; }
-  50% { opacity: 1; scale: 1.15; }
+  0%,
+  100% {
+    opacity: 0.35;
+    scale: 0.8;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.15;
+  }
 }
 
 @keyframes contact-scan {
-  0%, 100% { opacity: 0; scale: 1 0.2; }
-  45%, 55% { opacity: 0.55; scale: 1 1; }
+  0%,
+  100% {
+    opacity: 0;
+    scale: 1 0.2;
+  }
+  45%,
+  55% {
+    opacity: 0.55;
+    scale: 1 1;
+  }
 }
 
 @keyframes contact-focus-line {
-  from { opacity: 0; transform: scaleX(0); transform-origin: right; }
-  to { opacity: 1; transform: scaleX(1); transform-origin: left; }
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1072,7 +1135,68 @@
 }
 
 @keyframes contact-scan-mobile {
-  0%, 100% { opacity: 0; scale: 0.2 1; }
-  45%, 55% { opacity: 0.5; scale: 1 1; }
+  0%,
+  100% {
+    opacity: 0;
+    scale: 0.2 1;
+  }
+  45%,
+  55% {
+    opacity: 0.5;
+    scale: 1 1;
+  }
 }
 
+/* =========================================================
+   Q GIGANTE — CONTACT
+   MISMA POSICIÓN QUE HOME
+   ========================================================= */
+
+.contact-page {
+  overflow: visible;
+}
+
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.contact-hero-background-logo {
+  position: absolute;
+  z-index: 0;
+
+  top: -265px;
+
+  left: calc(max(40px, (100vw - 1180px) / 2) - 365px);
+
+  width: 720px;
+  height: 720px;
+
+  background-image: url("../../assets/images/logo.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: 0.09;
+
+  pointer-events: none;
+}
+
+.contact-hero-content,
+.contact-hero-number {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .contact-hero-background-logo {
+    top: -180px;
+
+    left: calc(max(20px, (100vw - 600px) / 2) - 275px);
+
+    width: 500px;
+    height: 500px;
+  }
+}

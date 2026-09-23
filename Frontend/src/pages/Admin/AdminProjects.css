@@ -1,0 +1,437 @@
+.qa-projects-admin,
+.qa-projects-admin *,
+.qa-projects-admin *::before,
+.qa-projects-admin *::after {
+  box-sizing: border-box;
+}
+
+.qa-projects-admin {
+  width: 100%;
+
+  color: #173235;
+}
+
+.qa-projects-admin__heading {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.qa-projects-admin__heading > div {
+  min-width: 0;
+}
+
+.qa-projects-admin__eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #ec654c;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.qa-projects-admin__heading h1 {
+  margin: 0;
+
+  color: #173235;
+
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.qa-projects-admin__heading p {
+  margin: 10px 0 0;
+
+  color: rgba(23, 50, 53, 0.62);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.qa-projects-admin__new-button {
+  min-height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  flex: 0 0 auto;
+
+  padding: 0 18px;
+
+  color: #f8f4ec;
+  background: #173235;
+
+  border: 1px solid #173235;
+  border-radius: 7px;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.qa-projects-admin__new-button:hover {
+  background: #23474a;
+  border-color: #23474a;
+
+  transform: translateY(-1px);
+}
+
+.qa-projects-admin__new-button:focus-visible {
+  outline: 2px solid #ec654c;
+  outline-offset: 3px;
+}
+
+.qa-projects-admin__new-button span {
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.qa-projects-admin__panel {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #f8f5ef;
+
+  border: 1px solid rgba(23, 50, 53, 0.17);
+}
+
+.qa-projects-admin__panel-header {
+  min-height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 19px 22px;
+
+  border-bottom: 1px solid rgba(23, 50, 53, 0.13);
+}
+
+.qa-projects-admin__panel-header > div {
+  display: flex;
+  align-items: baseline;
+
+  gap: 12px;
+}
+
+.qa-projects-admin__panel-label {
+  color: rgba(23, 50, 53, 0.58);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.qa-projects-admin__panel-header strong {
+  color: #173235;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  letter-spacing: -0.04em;
+}
+
+.qa-projects-admin__panel-header p {
+  margin: 0;
+
+  color: rgba(23, 50, 53, 0.5);
+
+  font-size: 11px;
+}
+
+.qa-projects-admin__table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.qa-projects-admin__table {
+  width: 100%;
+  min-width: 960px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.qa-projects-admin__table th {
+  padding: 14px 18px;
+
+  color: rgba(23, 50, 53, 0.52);
+  background: rgba(23, 50, 53, 0.025);
+
+  border-bottom: 1px solid rgba(23, 50, 53, 0.12);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.qa-projects-admin__table th:nth-child(1) {
+  width: 32%;
+}
+
+.qa-projects-admin__table th:nth-child(2) {
+  width: 19%;
+}
+
+.qa-projects-admin__table th:nth-child(3) {
+  width: 24%;
+}
+
+.qa-projects-admin__table th:nth-child(4) {
+  width: 11%;
+}
+
+.qa-projects-admin__table th:nth-child(5) {
+  width: 14%;
+}
+
+.qa-projects-admin__table td {
+  padding: 18px;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid rgba(23, 50, 53, 0.1);
+}
+
+.qa-projects-admin__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.qa-projects-admin__table tbody tr {
+  transition: background-color 0.18s ease;
+}
+
+.qa-projects-admin__table tbody tr:hover {
+  background: rgba(200, 231, 220, 0.16);
+}
+
+.qa-projects-admin__project {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.qa-projects-admin__number {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 31px;
+
+  color: #173235;
+  background: #e8e3da;
+
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.qa-projects-admin__project-copy {
+  min-width: 0;
+}
+
+.qa-projects-admin__project-copy strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #173235;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.qa-projects-admin__project-copy p {
+  max-width: 310px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: rgba(23, 50, 53, 0.55);
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.qa-projects-admin__category {
+  color: rgba(23, 50, 53, 0.72);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.qa-projects-admin__tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.qa-projects-admin__tags span {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 24px;
+
+  padding: 0 8px;
+
+  color: #385355;
+  background: #ece8e0;
+
+  border-radius: 100px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.qa-projects-admin__featured {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: rgba(23, 50, 53, 0.55);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.qa-projects-admin__featured-dot {
+  width: 7px;
+  height: 7px;
+
+  display: block;
+
+  flex: 0 0 7px;
+
+  background: rgba(23, 50, 53, 0.23);
+
+  border-radius: 50%;
+}
+
+.qa-projects-admin__featured--yes {
+  color: #3b695a;
+}
+
+.qa-projects-admin__featured--yes .qa-projects-admin__featured-dot {
+  background: #69a18d;
+}
+
+.qa-projects-admin__slug {
+  color: rgba(23, 50, 53, 0.65);
+  background: rgba(23, 50, 53, 0.05);
+
+  padding: 5px 7px;
+
+  border-radius: 4px;
+
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  font-size: 10px;
+}
+
+.qa-projects-admin__empty {
+  padding: 70px 25px;
+
+  text-align: center;
+}
+
+.qa-projects-admin__empty > span {
+  color: rgba(23, 50, 53, 0.45);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.qa-projects-admin__empty h2 {
+  margin: 14px 0 8px;
+
+  color: #173235;
+
+  font-size: 27px;
+  letter-spacing: -0.04em;
+}
+
+.qa-projects-admin__empty p {
+  margin: 0;
+
+  color: rgba(23, 50, 53, 0.55);
+
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .qa-projects-admin__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .qa-projects-admin__panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 4px;
+  }
+}
+
+@media (max-width: 520px) {
+  .qa-projects-admin__new-button {
+    width: 100%;
+  }
+}

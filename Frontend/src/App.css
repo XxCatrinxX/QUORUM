@@ -1186,3 +1186,49 @@ h2 em {
     text-align: left !important;
   }
 }
+
+/* =========================================================
+   Q GIGANTE — HOME
+   ========================================================= */
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  top: -265px;
+  left: -365px;
+
+  width: 720px;
+  height: 720px;
+
+  background-image: url("./assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-art,
+.scroll-cue {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .hero-section::before {
+    top: -180px;
+    left: -275px;
+
+    width: 500px;
+    height: 500px;
+  }
+}

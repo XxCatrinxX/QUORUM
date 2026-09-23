@@ -829,3 +829,360 @@
     padding: 30px 20px 50px;
   }
 }
+
+/* =========================================================
+   PÁGINAS ADMINISTRATIVAS
+   Estilos compartidos
+   ========================================================= */
+
+.qa-admin__content {
+  color: #173235;
+}
+
+/* =========================================================
+   ENCABEZADO DE PÁGINA
+   ========================================================= */
+
+.qa-admin__content .admin-page-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin: 0 0 38px;
+  padding: 0;
+}
+
+.qa-admin__content .admin-page-heading > div {
+  min-width: 0;
+}
+
+.qa-admin__content .admin-eyebrow {
+  display: block;
+
+  margin: 0 0 9px;
+  padding: 0;
+
+  color: #ec654c;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.qa-admin__content .admin-page-heading h1 {
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  color: #173235;
+
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.qa-admin__content .admin-page-heading p {
+  max-width: none;
+
+  margin: 10px 0 0;
+  padding: 0;
+
+  color: rgba(23, 50, 53, 0.62);
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.qa-admin__content .admin-primary-button {
+  min-height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  padding: 0 18px;
+
+  color: #f8f4ec;
+
+  background: #173235;
+
+  border: 1px solid #173235;
+  border-radius: 7px;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.qa-admin__content .admin-primary-button:hover {
+  color: #f8f4ec;
+
+  background: #23474a;
+
+  border-color: #23474a;
+
+  transform: translateY(-1px);
+}
+
+.qa-admin__content .admin-primary-button:focus-visible {
+  outline: 2px solid #ec654c;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   TARJETAS DEL DASHBOARD
+   ========================================================= */
+
+.qa-admin__content .admin-stats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.qa-admin__content .admin-stat-card {
+  min-width: 0;
+  min-height: 162px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  padding: 23px 22px 20px;
+
+  background: #f8f5ef;
+
+  border: 1px solid rgba(23, 50, 53, 0.17);
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.qa-admin__content .admin-stat-card:hover {
+  background: #fbf8f2;
+
+  border-color: rgba(23, 50, 53, 0.28);
+
+  transform: translateY(-2px);
+}
+
+.qa-admin__content .admin-stat-card > span {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: rgba(23, 50, 53, 0.58);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.qa-admin__content .admin-stat-card > strong {
+  display: block;
+
+  margin: 20px 0 0;
+  padding: 0;
+
+  color: #173235;
+
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+
+  font-size: 42px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.qa-admin__content .admin-stat-card > small {
+  display: block;
+
+  margin: auto 0 0;
+  padding: 0;
+
+  color: rgba(23, 50, 53, 0.55);
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ESTADO VACÍO
+   ========================================================= */
+
+.qa-admin__content .admin-empty-state {
+  width: 100%;
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 60px 30px;
+
+  background: #f8f5ef;
+
+  border: 1px solid rgba(23, 50, 53, 0.17);
+
+  text-align: center;
+}
+
+.qa-admin__content .admin-empty-state > span {
+  display: block;
+
+  margin: 0 0 16px;
+
+  color: rgba(23, 50, 53, 0.45);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+.qa-admin__content .admin-empty-state h2 {
+  max-width: none;
+
+  margin: 0 0 9px;
+  padding: 0;
+
+  color: #173235;
+
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.04em;
+}
+
+.qa-admin__content .admin-empty-state p {
+  max-width: 500px;
+
+  margin: 0;
+  padding: 0;
+
+  color: rgba(23, 50, 53, 0.55);
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   AISLAMIENTO DE ESTILOS GLOBALES
+   ========================================================= */
+
+.qa-admin__content section {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.qa-admin__content h1,
+.qa-admin__content h2,
+.qa-admin__content h3,
+.qa-admin__content p {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .qa-admin__content .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .qa-admin__content .admin-page-heading {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .qa-admin__content .admin-primary-button {
+    width: 100%;
+  }
+
+  .qa-admin__content .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-admin__content .admin-stat-card {
+    min-height: 145px;
+  }
+
+  .qa-admin__content .admin-empty-state {
+    min-height: 280px;
+
+    padding: 45px 20px;
+  }
+}

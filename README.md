@@ -18,18 +18,19 @@ QUORUM/
 │   └── ...
 │
 ├── Backend/
-│   └── QUORUM/
-│       ├── app/
-│       ├── config/
-│       ├── database/
-│       ├── public/
-│       ├── resources/
-│       ├── routes/
-│       ├── storage/
-│       ├── artisan
-│       └── composer.json
+│   ├── app/
+│   ├── config/
+│   ├── database/
+│   ├── public/
+│   ├── resources/
+│   ├── routes/
+│   ├── storage/
+│   ├── artisan
+│   └── composer.json
 │
-├── .gitignore
+├── BACKEND_README.md
+├── FRONTEND_README.md
+├── QUORUM_DOCKER_SETUP.md
 └── README.md
 ```
 
@@ -70,7 +71,7 @@ Antes de comenzar, asegúrate de tener instalado:
 Entrar a la carpeta del backend:
 
 ```bash
-cd Backend/QUORUM
+cd Backend
 ```
 
 Instalar las dependencias de Composer:
@@ -104,7 +105,7 @@ php artisan key:generate
 Abrir el archivo:
 
 ```text
-Backend/QUORUM/.env
+Backend/.env
 ```
 
 Configurar los datos correspondientes a la base de datos:
@@ -339,7 +340,7 @@ Responsable principalmente de:
 Ubicación:
 
 ```text
-Backend/QUORUM/
+Backend/
 ```
 
 ---

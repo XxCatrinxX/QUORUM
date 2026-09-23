@@ -42,16 +42,15 @@ La carpeta principal debe verse aproximadamente así:
 QUORUM/
 │
 ├── Backend/
-│   └── QUORUM/
-│       ├── app/
-│       ├── bootstrap/
-│       ├── config/
-│       ├── database/
-│       ├── routes/
-│       ├── Dockerfile
-│       ├── composer.json
-│       ├── .env.example
-│       └── ...
+│   ├── app/
+│   ├── bootstrap/
+│   ├── config/
+│   ├── database/
+│   ├── routes/
+│   ├── Dockerfile
+│   ├── composer.json
+│   ├── .env.example
+│   └── ...
 │
 ├── Frontend/
 │   ├── src/
@@ -72,7 +71,7 @@ Si `compose.yaml`, los Dockerfiles o `vite.config.ts` no existen, confirma que t
 Laravel necesita un archivo local llamado:
 
 ```text
-Backend/QUORUM/.env
+Backend/.env
 ```
 
 Este archivo normalmente no se comparte porque contiene información local y secretos.
@@ -82,7 +81,7 @@ Este archivo normalmente no se comparte porque contiene información local y sec
 Desde la carpeta principal de QUORUM:
 
 ```powershell
-Copy-Item ".\Backend\QUORUM\.env.example" ".\Backend\QUORUM\.env"
+Copy-Item ".\Backend\.env.example" ".\Backend\.env"
 ```
 
 Si el archivo `.env` ya existe, **no lo reemplaces**.
@@ -94,7 +93,7 @@ Si el archivo `.env` ya existe, **no lo reemplaces**.
 Abre:
 
 ```text
-Backend/QUORUM/.env
+Backend/.env
 ```
 
 La configuración principal debe usar estos valores:
@@ -460,7 +459,7 @@ Si Laravel muestra:
 No application encryption key has been specified.
 ```
 
-verifica que `Backend/QUORUM/.env` contenga:
+verifica que `Backend/.env` contenga:
 
 ```env
 APP_KEY=base64:...
@@ -616,7 +615,7 @@ No elimines otros contenedores sin confirmar primero qué aplicación los utiliz
 ```text
 [ ] Docker Desktop está instalado
 [ ] Docker Engine está en estado Running
-[ ] Existe Backend/QUORUM/.env
+[ ] Existe Backend/.env
 [ ] APP_KEY tiene una clave
 [ ] frontend está Running
 [ ] backend está Running

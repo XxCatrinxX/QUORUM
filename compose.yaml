@@ -27,7 +27,7 @@ services:
 
   backend:
     build:
-      context: ./Backend/QUORUM
+      context: ./Backend
       dockerfile: Dockerfile
 
     restart: unless-stopped
@@ -35,7 +35,7 @@ services:
     working_dir: /var/www/html
 
     volumes:
-      - ./Backend/QUORUM:/var/www/html
+      - ./Backend:/var/www/html
 
     ports:
       - "8001:8000"

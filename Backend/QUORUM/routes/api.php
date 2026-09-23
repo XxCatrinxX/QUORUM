@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -32,12 +32,10 @@ Route::middleware([
              * Preparado para permitir una foto
              * de perfil en el futuro.
              */
-            'avatar_url' =>
-            $user->avatar_url ?? null,
+            'avatar_url' => $user->avatar_url ?? null,
         ]);
     }
 );
-
 
 /*
 |--------------------------------------------------------------------------
@@ -52,13 +50,17 @@ Route::middleware([
     ->prefix('admin')
     ->group(function () {
 
+        Route::apiResource(
+            'projects',
+            ProjectController::class
+        );
+
         Route::get(
             '/dashboard',
             function () {
 
                 return response()->json([
-                    'message' =>
-                    'Dashboard administrativo',
+                    'message' => 'Dashboard administrativo',
                 ]);
             }
         );

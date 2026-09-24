@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     /**
-     * The attributes that are mass assignable.
-     *
      * @var list<string>
      */
     protected $fillable = [
@@ -19,16 +17,10 @@ class Project extends Model
         'detail',
         'tags',
         'color',
-        'image',
         'featured',
-        'status',
-        'sort_order',
-        'published_at',
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
      * @return array<string, string>
      */
     protected function casts(): array
@@ -36,8 +28,6 @@ class Project extends Model
         return [
             'tags' => 'array',
             'featured' => 'boolean',
-            'sort_order' => 'integer',
-            'published_at' => 'datetime',
         ];
     }
 }

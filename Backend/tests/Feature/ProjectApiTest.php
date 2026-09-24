@@ -15,30 +15,22 @@ class ProjectApiTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        $response = $this->postJson('/api/admin/projects', [
+        $this->postJson('/api/admin/projects', [
+            ...$this->projectData(),
             'title' => 'Nexo',
-            'category' => 'Fintech · Producto digital',
-            'description' => 'Una nueva forma de entender tus finanzas.',
-            'detail' => 'Plataforma digital para administrar finanzas.',
-            'tags' => ['Fintech', 'Web App', 'UX/UI'],
-            'color' => 'project-sand',
+            'slug' => null,
             'featured' => true,
-            'status' => 'published',
-            'sort_order' => 1,
-            'published_at' => '2026-09-22 12:00:00',
-        ]);
-
-        $response
+        ])
             ->assertCreated()
             ->assertJsonPath('title', 'Nexo')
             ->assertJsonPath('slug', 'nexo')
             ->assertJsonPath('featured', true)
-            ->assertJsonPath('tags.1', 'Web App');
+            ->assertJsonPath('tags.1', 'Dashboard');
 
         $this->assertDatabaseHas('projects', [
             'title' => 'Nexo',
             'slug' => 'nexo',
-            'status' => 'published',
+            'featured' => true,
         ]);
     }
 
@@ -49,14 +41,14 @@ class ProjectApiTest extends TestCase
 
         $this->getJson('/api/admin/projects')
             ->assertOk()
-            ->assertJsonPath('data.0.id', $project->id);
+            ->assertJsonPath('0.id', $project->id);
 
         $this->getJson("/api/admin/projects/{$project->id}")
             ->assertOk()
             ->assertJsonPath('slug', 'cargu');
     }
 
-    public function test_admin_can_update_a_project(): void
+    public function test_admin_can_update_a_project_partially(): void
     {
         $this->actingAsAdmin();
         $project = Project::create($this->projectData());
@@ -69,12 +61,43 @@ class ProjectApiTest extends TestCase
             ->assertOk()
             ->assertJsonPath('title', 'Cargu Pro')
             ->assertJsonPath('slug', 'cargu-pro')
+            ->assertJsonPath('category', 'Logística · Plataforma')
             ->assertJsonPath('featured', true);
+    }
+
+    public function test_only_one_project_can_be_featured(): void
+    {
+        $this->actingAsAdmin();
+        $firstProject = Project::create([
+            ...$this->projectData(),
+            'featured' => true,
+        ]);
+
+        $this->postJson('/api/admin/projects', [
+            ...$this->projectData(),
+            'title' => 'Nexo',
+            'slug' => 'nexo',
+            'featured' => true,
+        ])->assertCreated();
 
         $this->assertDatabaseHas('projects', [
-            'id' => $project->id,
-            'slug' => 'cargu-pro',
+            'id' => $firstProject->id,
+            'featured' => false,
         ]);
+        $this->assertDatabaseCount('projects', 2);
+    }
+
+    public function test_duplicate_slugs_receive_a_numeric_suffix(): void
+    {
+        $this->actingAsAdmin();
+        Project::create($this->projectData());
+
+        $this->postJson('/api/admin/projects', [
+            ...$this->projectData(),
+            'title' => 'Otro Cargu',
+        ])
+            ->assertCreated()
+            ->assertJsonPath('slug', 'cargu-2');
     }
 
     public function test_admin_can_delete_a_project(): void
@@ -88,17 +111,18 @@ class ProjectApiTest extends TestCase
         $this->assertDatabaseMissing('projects', ['id' => $project->id]);
     }
 
-    public function test_it_validates_required_fields_and_unique_slugs(): void
+    public function test_it_validates_required_fields(): void
     {
         $this->actingAsAdmin();
-        Project::create($this->projectData());
 
-        $this->postJson('/api/admin/projects', [
-            'title' => 'Otro proyecto',
-            'slug' => 'cargu',
-        ])
+        $this->postJson('/api/admin/projects', ['title' => 'Incompleto'])
             ->assertUnprocessable()
-            ->assertJsonValidationErrors(['slug', 'category', 'description']);
+            ->assertJsonValidationErrors([
+                'category',
+                'description',
+                'color',
+                'featured',
+            ]);
     }
 
     public function test_guests_cannot_manage_projects(): void
@@ -130,10 +154,10 @@ class ProjectApiTest extends TestCase
             'slug' => 'cargu',
             'category' => 'Logística · Plataforma',
             'description' => 'Una plataforma para optimizar operaciones logísticas.',
+            'detail' => null,
             'tags' => ['Logística', 'Dashboard'],
+            'color' => 'project-blue',
             'featured' => false,
-            'status' => 'draft',
-            'sort_order' => 2,
         ];
     }
 }

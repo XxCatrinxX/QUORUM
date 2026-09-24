@@ -34,7 +34,6 @@
   margin: 0;
 }
 
-
 /* =========================
    HERO
 ========================= */
@@ -50,7 +49,11 @@
 
   position: relative;
   overflow: hidden;
-  background: linear-gradient(120deg, rgba(244, 241, 235, 0.98), rgba(232, 227, 218, 0.5));
+  background: linear-gradient(
+    120deg,
+    rgba(244, 241, 235, 0.98),
+    rgba(232, 227, 218, 0.5)
+  );
 }
 
 .services-hero-content {
@@ -83,10 +86,11 @@
   height: 3px;
   border-radius: 99px;
   background: var(--services-accent);
-  content: '';
+  content: "";
   transform: scaleX(0);
   transform-origin: left;
-  animation: services-draw-line 0.8s 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: services-draw-line 0.8s 0.8s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
 }
 
 .services-hero p {
@@ -117,7 +121,10 @@
   font-weight: 500;
 
   box-shadow: 0 7px 0 rgba(23, 23, 23, 0.14);
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .services-cta:hover {
@@ -149,7 +156,6 @@
   color: #999;
   animation: services-reveal 0.8s 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-
 
 /* =========================
    SERVICES
@@ -187,7 +193,6 @@
   line-height: 1.7;
   color: #666;
 }
-
 
 /* =========================
    SERVICE CARDS
@@ -284,14 +289,16 @@
 
   font-size: 11px;
   color: #777;
-  transition: border-color 0.35s ease, color 0.35s ease, background 0.35s ease;
+  transition:
+    border-color 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease;
 }
 
 .service-card:hover .service-tags span {
   border-color: rgba(162, 173, 145, 0.55);
   background: rgba(162, 173, 145, 0.12);
 }
-
 
 /* =========================
    FEATURED
@@ -362,7 +369,7 @@
   height: 420px;
   border: 1px solid rgba(162, 173, 145, 0.35);
   border-radius: 50%;
-  content: '';
+  content: "";
   animation: services-orbit 14s ease-in-out infinite;
 }
 
@@ -403,19 +410,28 @@
   display: block;
   height: 1px;
   background: #555;
-  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+  transition:
+    width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
 }
 
-.visual-lines i:nth-child(1) { width: 55%; }
-.visual-lines i:nth-child(2) { width: 80%; }
-.visual-lines i:nth-child(3) { width: 65%; }
-.visual-lines i:nth-child(4) { width: 90%; }
+.visual-lines i:nth-child(1) {
+  width: 55%;
+}
+.visual-lines i:nth-child(2) {
+  width: 80%;
+}
+.visual-lines i:nth-child(3) {
+  width: 65%;
+}
+.visual-lines i:nth-child(4) {
+  width: 90%;
+}
 
 .visual-card:hover .visual-lines i {
   width: 100%;
   background: var(--services-accent);
 }
-
 
 /* =========================
    PROCESS
@@ -435,7 +451,9 @@
   border-bottom: 1px solid #d5d0c7;
 
   align-items: center;
-  transition: padding 0.35s ease, background 0.35s ease;
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease;
 }
 
 .process-item:hover {
@@ -476,7 +494,6 @@
   font-size: 20px;
 }
 
-
 /* =========================
    TECHNOLOGIES
 ========================= */
@@ -501,7 +518,11 @@
   border: 1px solid #c7c0b5;
 
   font-size: 14px;
-  transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .technology-list span:hover {
@@ -510,7 +531,6 @@
   color: var(--services-paper);
   transform: translateY(-5px);
 }
-
 
 /* =========================
    FINAL CTA
@@ -533,7 +553,7 @@
   height: min(60vw, 720px);
   border: 1px solid rgba(162, 173, 145, 0.35);
   border-radius: 50%;
-  content: '';
+  content: "";
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
@@ -564,7 +584,11 @@
   text-decoration: none;
 
   font-size: 14px;
-  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .services-final-cta > * {
@@ -579,13 +603,11 @@
   transform: translateY(-5px);
 }
 
-
 /* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 800px) {
-
   .services-hero {
     min-height: auto;
     padding: 100px 6%;
@@ -634,26 +656,45 @@
   .visual-card {
     width: min(72%, 310px);
   }
-
 }
 
 @keyframes services-reveal {
-  from { opacity: 0; transform: translateY(26px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes services-draw-line {
-  to { transform: scaleX(1); }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes services-card-float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -10px; }
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
 }
 
 @keyframes services-orbit {
-  0%, 100% { rotate: -7deg; scale: 1; }
-  50% { rotate: 7deg; scale: 1.05; }
+  0%,
+  100% {
+    rotate: -7deg;
+    scale: 1;
+  }
+  50% {
+    rotate: 7deg;
+    scale: 1.05;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -663,5 +704,59 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   Q GIGANTE — SERVICES
+   MISMA POSICIÓN QUE HOME
+   ========================================================= */
+
+.services-page {
+  overflow: visible;
+}
+
+.services-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.services-hero-background-logo {
+  position: absolute;
+  z-index: 0;
+
+  top: -265px;
+
+  left: calc(max(40px, (100vw - 1180px) / 2) - 365px);
+
+  width: 720px;
+  height: 720px;
+
+  background-image: url("../../assets/images/logo.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: 0.09;
+
+  pointer-events: none;
+}
+
+.services-hero-content,
+.hero-decoration {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .services-hero-background-logo {
+    top: -180px;
+
+    left: calc(max(20px, (100vw - 600px) / 2) - 275px);
+
+    width: 500px;
+    height: 500px;
   }
 }

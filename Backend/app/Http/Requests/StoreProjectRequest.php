@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
 class StoreProjectRequest extends FormRequest
@@ -20,26 +19,23 @@ class StoreProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255', 'unique:projects,slug'],
-            'category' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'detail' => ['nullable', 'string'],
-            'tags' => ['nullable', 'array'],
-            'tags.*' => ['string', 'max:100', 'distinct'],
-            'color' => ['nullable', 'string', 'max:50'],
-            'image' => ['nullable', 'string', 'max:255'],
-            'featured' => ['sometimes', 'boolean'],
-            'status' => ['sometimes', Rule::in(['draft', 'published', 'archived'])],
-            'sort_order' => ['sometimes', 'integer', 'min:0'],
-            'published_at' => ['nullable', 'date'],
+            'title' => ['required', 'string', 'max:150'],
+            'slug' => ['nullable', 'string', 'max:180'],
+            'category' => ['required', 'string', 'max:150'],
+            'description' => ['required', 'string', 'max:2000'],
+            'detail' => ['nullable', 'string', 'max:5000'],
+            'tags' => ['nullable', 'array', 'max:10'],
+            'tags.*' => ['string', 'max:50', 'distinct'],
+            'color' => [
+                'required',
+                Rule::in([
+                    'project-sand',
+                    'project-blue',
+                    'project-gray',
+                    'project-yellow',
+                ]),
+            ],
+            'featured' => ['required', 'boolean'],
         ];
-    }
-
-    protected function prepareForValidation(): void
-    {
-        $this->merge([
-            'slug' => Str::slug($this->input('slug', $this->input('title', ''))),
-        ]);
     }
 }

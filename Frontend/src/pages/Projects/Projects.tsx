@@ -68,7 +68,6 @@ function Projects() {
       ========================= */}
 
       <section className="projects-hero">
-        <div className="projects-hero-background-logo" aria-hidden="true" />
 
         <div className="projects-hero-content">
           <span className="eyebrow">NUESTRO TRABAJO</span>

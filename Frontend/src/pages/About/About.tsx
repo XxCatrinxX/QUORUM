@@ -45,7 +45,6 @@ function About() {
       ========================= */}
 
       <section className="about-hero">
-        <div className="about-hero-background-logo" aria-hidden="true" />
 
         <div className="about-hero-content">
           <span className="eyebrow">SOBRE QUORUM</span>

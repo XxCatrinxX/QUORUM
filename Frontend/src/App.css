@@ -80,6 +80,13 @@
   margin-right: 5px;
 }
 
+.brand-mark .logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 .brand-dot {
   color: var(--coral);
 }
@@ -442,10 +449,6 @@ h2 em {
   font-size: clamp(42px, 5vw, 68px);
 }
 
-/* =========================================================
-   SERVICES
-   ========================================================= */
-
 .services-section {
   display: grid;
 
@@ -781,7 +784,6 @@ h2 em {
     line-height: 1.5;
   }
 }
-
 /* =========================================================
    CONTACT BAND
    ========================================================= */
@@ -1188,47 +1190,454 @@ h2 em {
 }
 
 /* =========================================================
-   Q GIGANTE — HOME
+   ANIMACIONES DEL DISEÑO
    ========================================================= */
 
-.hero-section {
+.site-header {
   position: relative;
-  isolation: isolate;
+  z-index: 10;
+  height: 84px;
+  border-bottom-color: rgba(16, 43, 44, 0.12);
+  animation: reveal-down 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.brand,
+.footer-brand {
+  letter-spacing: -1px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  background: var(--sand);
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(-8deg) translateY(-2px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+nav {
+  gap: 28px;
+}
+
+nav a,
+.header-link,
+.text-link {
+  position: relative;
+}
+
+nav a::after,
+.text-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: var(--coral);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+nav a:hover::after,
+.text-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header-link {
+  padding: 11px 16px;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.header-link:hover {
+  color: var(--paper);
+  background: var(--ink);
+  transform: translateY(-2px);
+}
+
+.hero-section {
+  min-height: 720px;
+  gap: clamp(35px, 7vw, 100px);
 }
 
 .hero-section::before {
-  content: "";
-
   position: absolute;
-  z-index: 0;
-
-  top: -265px;
-  left: -365px;
-
-  width: 720px;
-  height: 720px;
-
-  background-image: url("./assets/images/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
+  top: 9%;
+  right: -12%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 580px;
+  max-height: 580px;
+  border: 1px solid rgba(238, 104, 76, 0.2);
+  border-radius: 50%;
+  content: '';
   pointer-events: none;
+  animation: breathe 9s ease-in-out infinite;
 }
 
 .hero-copy,
-.hero-art,
+.hero-art {
+  animation: reveal-up 0.9s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-art {
+  animation-delay: 0.25s;
+}
+
+.eyebrow,
+.contact-band__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.eyebrow::before,
+.contact-band__eyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  content: '';
+  box-shadow: 0 0 0 5px rgba(238, 104, 76, 0.12);
+}
+
+h1,
+h2 {
+  letter-spacing: -4px;
+}
+
+h1 {
+  max-width: 760px;
+  font-size: clamp(58px, 7.5vw, 108px);
+}
+
+h1 em,
+h2 em {
+  position: relative;
+  display: inline-block;
+}
+
+h1 em::after,
+h2 em::after {
+  position: absolute;
+  right: 4%;
+  bottom: -8px;
+  left: 0;
+  height: 4px;
+  border-radius: 99px;
+  background: var(--mint);
+  content: '';
+  transform: rotate(-2deg) scaleX(0);
+  transform-origin: left;
+  animation: draw-line 0.8s 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.button {
+  min-height: 49px;
+  gap: 20px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.button-primary {
+  box-shadow: 0 8px 0 rgba(16, 43, 44, 0.13);
+}
+
+.button-primary:hover {
+  background: var(--sand);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 0 rgba(16, 43, 44, 0.12);
+}
+
+.art-grid {
+  inset: 5px -25px 0 0;
+  background-size: 42px 42px;
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+  opacity: 0.46;
+}
+
+.art-card {
+  box-shadow: 18px 22px 0 rgba(16, 43, 44, 0.13), var(--shadow-soft);
+}
+
+.art-card-main {
+  top: 50px;
+  right: 60px;
+  width: 280px;
+  height: 370px;
+  transform: rotate(5deg);
+  animation: card-float 7s ease-in-out infinite;
+}
+
+.art-card-note {
+  right: -4px;
+  bottom: 38px;
+  box-shadow: 9px 12px 0 rgba(16, 43, 44, 0.1);
+  animation: card-float 6s 0.8s ease-in-out infinite reverse;
+}
+
+.art-orbit {
+  border-color: var(--coral);
+  animation: orbit-drift 12s ease-in-out infinite;
+}
+
+.orbit-two {
+  animation-delay: -4s;
+}
+
 .scroll-cue {
+  bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-cue:hover {
+  transform: translateY(4px);
+}
+
+.scroll-cue span {
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+.section {
+  padding: 145px 0;
+  border-top-color: rgba(16, 43, 44, 0.12);
+}
+
+.section-heading h2 {
+  font-size: clamp(44px, 5.5vw, 76px);
+}
+
+.services-list {
+  border-top-color: var(--ink);
+  animation: breathe 12s ease-in-out infinite reverse;
+}
+
+.service-item {
+  position: relative;
+  padding: 30px 0;
+  transition: padding 0.35s ease, background-color 0.35s ease;
+}
+
+.service-item::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--coral);
+  content: '';
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-item:hover {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.service-item:hover::before {
+  width: 100%;
+}
+
+.service-arrow {
+  transition: transform 0.35s ease;
+}
+
+.service-item:hover .service-arrow {
+  transform: translate(3px, -3px);
+}
+
+.work-heading {
+  top: 116px;
+}
+
+.project-card {
+  box-shadow: 0 0 0 rgba(16, 43, 44, 0);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 24px 45px rgba(16, 43, 44, 0.16);
+}
+
+.project-visual {
+  height: 310px;
+  background: rgba(16, 43, 44, 0.07);
+}
+
+.project-meta {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  left: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-meta .project-index,
+.project-meta .project-tag {
+  position: static;
+  flex: 0 0 auto;
+  font-size: 8px;
+}
+
+.project-meta .project-index {
+  padding: 3px 5px;
+  letter-spacing: 0.7px;
+}
+
+.project-meta .project-tag {
+  padding: 4px 7px;
+  font-size: 7px;
+  letter-spacing: 0.5px;
+}
+
+.project-letter {
   position: relative;
   z-index: 1;
+  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-size: clamp(110px, 12vw, 165px);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -15px;
+}
+
+.project-visual::before {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.project-card:hover .project-visual::before {
+  transform: scale(1.42) rotate(18deg);
+}
+
+.project-card:hover .project-letter {
+  transform: translateY(-7px) scale(1.06);
+}
+
+.contact-band {
+  padding-top: 110px;
+  padding-bottom: 95px;
+  background: var(--ink);
+}
+
+.contact-band::before {
+  width: 620px;
+  height: 620px;
+  border-color: rgba(200, 227, 213, 0.2);
+  animation: breathe 12s ease-in-out infinite reverse;
+}
+
+.contact-band__eyebrow {
+  color: var(--mint);
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-down {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes draw-line {
+  to { transform: rotate(-2deg) scaleX(1); }
+}
+
+@keyframes card-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -9px; }
+}
+
+@keyframes orbit-drift {
+  0%, 100% { rotate: -27deg; }
+  50% { rotate: -20deg; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.5; scale: 1; }
+  50% { opacity: 1; scale: 1.04; }
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
 }
 
 @media (max-width: 800px) {
   .hero-section::before {
-    top: -180px;
-    left: -275px;
+    top: 22%;
+    right: -35%;
+    width: 90vw;
+    height: 90vw;
+  }
 
-    width: 500px;
-    height: 500px;
+  .hero-art {
+    height: 420px;
+  }
+
+  .art-card-main {
+    right: 28px;
+  }
+
+  .section {
+    padding: 95px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-visual {
+    display: block;
+    height: 250px;
+  }
+
+  .project-visual::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .project-card:hover .project-visual::before {
+    transform: translate(-50%, -50%) scale(1.42) rotate(18deg);
+  }
+
+  .project-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: clamp(100px, 30vw, 140px);
+    letter-spacing: -8px;
+    transform: translate(-50%, -42%);
+  }
+
+  .project-card:hover .project-letter {
+    transform: translate(-50%, -42%) scale(1.06);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

@@ -48,7 +48,6 @@ function Contact() {
       ========================= */}
 
       <section className="contact-hero">
-        <div className="contact-hero-background-logo" aria-hidden="true" />
 
         <div className="contact-hero-content">
           <span className="eyebrow">HABLEMOS</span>

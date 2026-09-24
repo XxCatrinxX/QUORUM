@@ -657,7 +657,6 @@
     width: min(72%, 310px);
   }
 }
-
 @keyframes services-reveal {
   from {
     opacity: 0;
@@ -707,56 +706,3 @@
   }
 }
 
-/* =========================================================
-   Q GIGANTE — SERVICES
-   MISMA POSICIÓN QUE HOME
-   ========================================================= */
-
-.services-page {
-  overflow: visible;
-}
-
-.services-hero {
-  position: relative;
-  isolation: isolate;
-  overflow: visible;
-}
-
-.services-hero-background-logo {
-  position: absolute;
-  z-index: 0;
-
-  top: -265px;
-
-  left: calc(max(40px, (100vw - 1180px) / 2) - 365px);
-
-  width: 720px;
-  height: 720px;
-
-  background-image: url("../../assets/images/logo.png");
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
-  opacity: 0.09;
-
-  pointer-events: none;
-}
-
-.services-hero-content,
-.hero-decoration {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 800px) {
-  .services-hero-background-logo {
-    top: -180px;
-
-    left: calc(max(20px, (100vw - 600px) / 2) - 275px);
-
-    width: 500px;
-    height: 500px;
-  }
-}

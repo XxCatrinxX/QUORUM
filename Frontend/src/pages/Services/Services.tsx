@@ -84,7 +84,6 @@ function Services() {
     <main className="services-page">
       {/* HERO */}
       <section className="services-hero">
-        <div className="services-hero-background-logo" aria-hidden="true" />
         <div className="services-hero-content">
           <span className="eyebrow">LO QUE HACEMOS</span>
 

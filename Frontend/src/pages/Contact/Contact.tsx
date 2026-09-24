@@ -194,29 +194,31 @@ function Contact() {
           <div className="form-field">
             <label htmlFor="projectType">¿Qué quieres construir?</label>
 
-            <select
-              id="projectType"
-              name="projectType"
-              value={form.projectType}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Selecciona una opción</option>
+            <div className="form-select-wrap">
+              <select
+                id="projectType"
+                name="projectType"
+                value={form.projectType}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Selecciona una opción</option>
 
-              <option value="web">Plataforma / Aplicación web</option>
+                <option value="web">Plataforma / Aplicación web</option>
 
-              <option value="mobile">Aplicación móvil</option>
+                <option value="mobile">Aplicación móvil</option>
 
-              <option value="system">Sistema empresarial</option>
+                <option value="system">Sistema empresarial</option>
 
-              <option value="ecommerce">E-commerce</option>
+                <option value="ecommerce">E-commerce</option>
 
-              <option value="automation">Automatización</option>
+                <option value="automation">Automatización</option>
 
-              <option value="ai">Inteligencia artificial</option>
+                <option value="ai">Inteligencia artificial</option>
 
-              <option value="other">Otro</option>
-            </select>
+                <option value="other">Otro</option>
+              </select>
+            </div>
           </div>
 
           {/* PRESUPUESTO */}
@@ -224,22 +226,24 @@ function Contact() {
           <div className="form-field">
             <label htmlFor="budget">Presupuesto aproximado</label>
 
-            <select
-              id="budget"
-              name="budget"
-              value={form.budget}
-              onChange={handleChange}
-            >
-              <option value="">Prefiero hablarlo</option>
+            <div className="form-select-wrap">
+              <select
+                id="budget"
+                name="budget"
+                value={form.budget}
+                onChange={handleChange}
+              >
+                <option value="">Prefiero hablarlo</option>
 
-              <option value="10-25">$10,000 — $25,000 MXN</option>
+                <option value="10-25">$10,000 — $25,000 MXN</option>
 
-              <option value="25-50">$25,000 — $50,000 MXN</option>
+                <option value="25-50">$25,000 — $50,000 MXN</option>
 
-              <option value="50-100">$50,000 — $100,000 MXN</option>
+                <option value="50-100">$50,000 — $100,000 MXN</option>
 
-              <option value="100+">$100,000+ MXN</option>
-            </select>
+                <option value="100+">$100,000+ MXN</option>
+              </select>
+            </div>
           </div>
 
           {/* MENSAJE */}

@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
+import { BackToTop } from "../components/layout/BackToTop";
 
 import ProtectedAdminRoute from "../components/admin/ProtectedAdminRoute";
 import AdminLayout from "../components/admin/AdminLayout";
@@ -33,6 +34,8 @@ function PublicLayout({ children }: PublicLayoutProps) {
       <main>{children}</main>
 
       <Footer />
+
+      <BackToTop />
     </>
   );
 }

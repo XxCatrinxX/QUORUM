@@ -285,6 +285,41 @@
   border-radius: 0;
 }
 
+.form-select-wrap {
+  position: relative;
+}
+
+.form-select-wrap::after {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  color: #777;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-65%) rotate(45deg);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-field select {
+  appearance: none;
+  padding-right: 28px;
+  cursor: pointer;
+}
+
+.form-select-wrap:focus-within::after {
+  color: var(--contact-accent);
+  transform: translateY(-35%) rotate(225deg);
+}
+
+.form-field select option {
+  color: #171717;
+  background: #f4f1eb;
+}
+
 .form-field input::placeholder,
 .form-field textarea::placeholder {
   color: #999;

@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from "react";
-import "./SushiBuilder.css";
+import "./sushiBuilder.css";
 
 import algaImage from "../../../assets/sushi/alga-base.png";
 import riceImage from "../../../assets/sushi/arroz-base.png";

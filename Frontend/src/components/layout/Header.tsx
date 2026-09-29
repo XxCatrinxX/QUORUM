@@ -35,6 +35,8 @@ export function Header() {
 
         <NavLink to="/servicios">Servicios</NavLink>
 
+        <NavLink to="/lab">LAB</NavLink>
+
         <NavLink to="/proyectos">Proyectos</NavLink>
 
         <NavLink to="/contacto">Contacto</NavLink>
@@ -78,9 +80,14 @@ export function Header() {
           <span>03</span>
         </NavLink>
 
+        <NavLink to="/lab" onClick={closeMenu}>
+          LAB
+          <span>04</span>
+        </NavLink>
+
         <NavLink to="/contacto" onClick={closeMenu}>
           Contacto
-          <span>04</span>
+          <span>05</span>
         </NavLink>
       </nav>
     </header>

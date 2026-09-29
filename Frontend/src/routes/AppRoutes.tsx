@@ -12,6 +12,7 @@ import AdminLayout from "../components/admin/AdminLayout";
 import Home from "../pages/Home/Home";
 import Services from "../pages/Services/Services";
 import Projects from "../pages/Projects/Projects";
+import Lab from "../pages/Lab/Lab";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 
@@ -21,6 +22,9 @@ import AdminProjects from "../pages/Admin/Projects";
 import Clients from "../pages/Admin/Clients";
 import Tasks from "../pages/Admin/Tasks";
 import Meeting from "../pages/Admin/Meeting";
+
+// LABS //
+import SushiBuilder from "../pages/Lab/Sushi-Builder/sushiBuilder";
 
 type PublicLayoutProps = {
   children: ReactNode;
@@ -80,6 +84,15 @@ export default function AppRoutes() {
       />
 
       <Route
+  path="/lab"
+  element={
+    <PublicLayout>
+      <Lab />
+    </PublicLayout>
+  }
+/>
+
+      <Route
         path="/contacto"
         element={
           <PublicLayout>
@@ -105,6 +118,15 @@ export default function AppRoutes() {
           <Route path="meeting" element={<Meeting />} />
         </Route>
       </Route>
+
+      <Route
+  path="/lab/sushi-builder"
+  element={
+    <PublicLayout>
+      <SushiBuilder />
+    </PublicLayout>
+  }
+/>
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

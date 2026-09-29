@@ -1,0 +1,206 @@
+.lab-page {
+  min-height: 100vh;
+  background: #f5f1e8;
+  color: #111;
+}
+
+/* HERO */
+
+.lab-hero {
+  padding: 140px 7vw 120px;
+}
+
+.lab-eyebrow {
+  margin: 0 0 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lab-hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(52px, 8vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.lab-hero h1 span {
+  opacity: 0.45;
+}
+
+.lab-hero-description {
+  max-width: 500px;
+  margin-top: 45px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* EXPERIENCES */
+
+.lab-experiences {
+  padding: 0 7vw 120px;
+}
+
+.lab-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.lab-section-number {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.lab-section-header h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.lab-section-description {
+  max-width: 360px;
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* GRID */
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* CARD */
+
+.lab-card {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: #ebe6dc;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.lab-card:hover {
+  transform: translateY(-6px);
+  background: #e5dfd3;
+}
+
+.lab-card-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 22px;
+}
+
+.lab-category,
+.lab-number {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lab-category {
+  color: #666;
+}
+
+.lab-number {
+  color: #999;
+}
+
+/* PREVIEW */
+
+.lab-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  font-size: 130px;
+}
+
+/* INFO */
+
+.lab-info {
+  padding: 28px;
+  background: #f5f1e8;
+}
+
+.lab-info h3 {
+  margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.lab-info p {
+  max-width: 500px;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.lab-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.lab-tech {
+  font-size: 11px;
+  color: #777;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lab-arrow {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.lab-card:hover .lab-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .lab-hero {
+    padding: 100px 6vw 80px;
+  }
+
+  .lab-experiences {
+    padding: 0 6vw 80px;
+  }
+
+  .lab-section-header {
+    display: block;
+  }
+
+  .lab-section-description {
+    margin-top: 25px;
+  }
+
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-preview {
+    min-height: 280px;
+  }
+}

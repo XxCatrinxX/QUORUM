@@ -379,8 +379,8 @@ export default function SushiBuilder() {
                         ${isFlying ? "is-flying" : ""}
                       `}
                       style={{
-                        left: `${x}%`,
-                        top: `${y}%`,
+                        "--ingredient-left": `${x}%`,
+                        "--ingredient-top": `${y}%`,
                         "--start-left": `${x}%`,
                         "--start-top": `${y}%`,
                         animationDelay: `${index * 0.08}s`,

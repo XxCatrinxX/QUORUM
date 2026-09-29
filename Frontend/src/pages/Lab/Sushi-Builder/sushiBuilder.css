@@ -465,6 +465,9 @@
 .ingredient-choice {
   position: absolute;
 
+  left: var(--ingredient-left);
+  top: var(--ingredient-top);
+
   width: 145px;
   height: 145px;
 
@@ -1000,36 +1003,147 @@ img {
   .sushi-stage {
     width: 100%;
     max-width: 600px;
+    aspect-ratio: auto;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
   }
 
   .sushi-stack {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
     width:
       min(
         330px,
         60vw
       );
+
+    margin: 0 auto;
+
+    transform: none;
   }
 
   .ingredient-orbit {
-    width:
-      min(
-        var(--orbit-size),
-        90vw
-      );
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    max-width: 600px;
+
+    aspect-ratio: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+
+    gap: 8px;
+
+    transform: none;
+
+    animation: mobile-ingredients-ready 2s ease forwards;
   }
 
   .ingredient-choice {
-    width: 112px;
-    height: 112px;
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    min-width: 0;
+    height: 76px;
+
+    padding: 7px 10px;
+
+    justify-content: flex-start;
+    gap: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: none;
+
+    animation-name: mobile-ingredient-appear;
   }
 
   .ingredient-choice img {
-    width: 100px;
-    height: 100px;
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
   }
 
   .ingredient-choice span {
-    font-size: 10px;
+    position: static;
+
+    transform: none;
+
+    overflow: hidden;
+
+    font-size: 12px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    opacity: 1;
+  }
+
+  .ingredient-choice.is-selected {
+    border-color: rgba(0, 0, 0, 0.55);
+    background: #fff;
+  }
+
+  .ingredient-remove-mark {
+    flex: 0 0 44px;
+  }
+
+  .ingredient-choice.is-flying {
+    animation-name: mobile-ingredient-fly;
+    animation-delay: 0s;
+  }
+
+  .ingredient-choice.is-flying span {
+    opacity: 0;
+  }
+
+  @keyframes mobile-ingredients-ready {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mobile-ingredient-appear {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes mobile-ingredient-fly {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(0.45) translateY(-20px);
+    }
   }
 
   .ingredient-status {
@@ -1061,35 +1175,20 @@ img {
   }
 
   .sushi-stage {
-    width: 115vw;
+    width: 100%;
     max-width: none;
   }
 
   .sushi-stack {
-    width: 250px;
+    width: min(250px, 70vw);
   }
 
   .ingredient-orbit {
-    width:
-      min(
-        var(--orbit-size),
-        100vw
-      );
-  }
-
-  .ingredient-choice {
-    width: 100px;
-    height: 100px;
-  }
-
-  .ingredient-choice img {
-    width: 88px;
-    height: 88px;
+    width: 100%;
   }
 
   .ingredient-choice span {
-    bottom: -18px;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .ingredient-status {

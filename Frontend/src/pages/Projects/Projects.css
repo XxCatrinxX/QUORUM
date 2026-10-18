@@ -901,3 +901,152 @@
   }
 }
 
+
+/* Captura real del proyecto */
+.project-card-visual--image {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.project-card-visual--image > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 350ms ease;
+  z-index: -1;
+}
+
+.project-card:hover .project-card-visual--image > img {
+  transform: scale(1.04);
+}
+
+/* Mantener los elementos de la tarjeta sobre la imagen */
+.project-card-visual--image .project-card-number,
+.project-card-visual--image .project-card-arrow {
+  z-index: 1;
+}
+
+/* Imagen principal y capturas del proyecto destacado */
+.featured-project-visual--image::before {
+  display: none;
+}
+
+.featured-project-visual--image::after {
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 23, 0.42),
+    transparent 28%,
+    transparent 62%,
+    rgba(23, 23, 23, 0.55)
+  );
+}
+
+.featured-project-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.featured-project-visual--image .project-visual-top,
+.featured-project-visual--image .project-visual-bottom {
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.featured-project-gallery {
+  margin-top: 64px;
+}
+
+.featured-project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.featured-project-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.featured-project-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--projects-sand);
+}
+
+.featured-project-gallery figcaption {
+  margin-top: 12px;
+  color: #666;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .featured-project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Etiqueta de demostración */
+.project-status {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 2;
+  padding: 7px 10px;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+/* Enlace independiente para abrir la demo */
+.project-demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 15px 22px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+}
+
+.project-demo-link span {
+  transition: transform 200ms ease;
+}
+
+.project-demo-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+.project-demo-link:focus-visible,
+.project-card-link:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card-visual--image > img,
+  .project-demo-link span {
+    transition: none;
+  }
+}
